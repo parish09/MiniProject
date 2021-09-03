@@ -26,8 +26,9 @@
 				<a href="#">Home</a>
 				<a href="#">Tourism</a>
 				<a href="#">Transportation</a>
-				<a href="#">Pay Bills</a>
+				<a href="#">Events</a>
 				<a href="#">Contact Us</a>
+				<a href="#">Log In</a>
 			</div>
 		</div>
 	</header>
@@ -41,7 +42,7 @@
 			<h1>Welcome to<br /><span>Smart city</span></h1>
 			<p>
 				Insert Text Here About Smart City</p>
-			<a href="#">Read More</a>
+			<a href="#">Login</a>
 		</div>
 		<div class="content">
 			<h1>Places to<br /><span>Explore</span></h1>
@@ -56,9 +57,9 @@
 			<a href="#">Read More</a>
 		</div>
 		<div class="content">
-			<h1>Pay Your <br /><span>Bills</span></h1>
+			<h1>Upcoming <br /><span>Events</span></h1>
 			<p>
-				Insert Text Here About Bills</p>
+				Insert Text Here About Events</p>
 			<a href="#">Read More</a>
 		</div>
 		<div class="media-icons">
@@ -70,7 +71,7 @@
 			<div class="nav-btn active"></div>
 			<div class="nav-btn"></div>
 			<div class="nav-btn"></div>
-			<div class="nav-btn"></div>
+		 	<div class="nav-btn"></div>
 		</div>
 	</section>
 
@@ -118,12 +119,16 @@
 			let i=1;
 			var repeater= () => {
 				setTimeout(function(){
-					slide[i].classList.Add('active');
-					btn[i].classList.Add('active');
-					content[i].classList.Add('active');
+					slides[i].classList.Add('active');
+					btns[i].classList.Add('active');
+					contents[i].classList.Add('active');
 					i++;
-					if(slides.length==i)i=0;
-					if(i>=slides.length)return;
+					if(slides.length==i){
+						i=0;
+					}
+					if(i>=slides.length){
+						return;
+					}
 					repeater();
 				},1000);
 			}
@@ -132,5 +137,4 @@
 		repeat();
 	</script>
 </body>
-
 </html>
